@@ -117,7 +117,7 @@ div.box2 {
 div.book {
 	height: 210px;
 	width: 140px;
-	background-color: darkgray;
+	background-color: rgb(177,179,179);
 	display: inline-block;
 	margin: 5px;
 	padding: 0px;
