@@ -1,0 +1,298 @@
+/* styles for page */
+
+body, p, h1, h2, h3 {
+	margin:0;
+	padding:0;
+	}
+
+div.header {
+text-align:center;
+border-bottom:10px solid #fff;
+background-color: rgb(57,150,210);
+}
+
+div.padding > h3 {
+	margin-left:.5em;
+	}
+	
+div.padding-body {
+margin:30px 5% 0 5%;
+}
+
+
+
+body {
+background-color: rgb(177,179,179);
+}
+
+.logo {
+padding-top: 10px;
+padding-left:10px;
+margin: 0 0 10px 0;
+width: 10em;
+}
+
+h1.title {
+margin-top:0;
+line-height:1;
+font-family: "Helvetica", Georgia, sans serif;
+text-align: center; 
+font-size: 500%;
+color: white;
+}
+
+h2 {
+font-family: "Helvetica", Georgia, sans serif;
+text-align: center; 
+font-size: 300%;
+color: white;
+margin:25px 0 20px 0;
+}
+
+h3 {
+font-family: Georgia, serif;
+font-size:largest;
+text-indent: 2 em;
+line-height:1em;
+margin:20px 0;
+}
+
+div.logo {
+ width:15%;
+
+ }
+
+
+/* styles for buttons */
+
+div.button {
+	height: 40px;
+	width: 110px;
+	display: inline-block;
+	border: 2px solid white;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:40px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+div.button.primary {
+	background-color: rgb(242,169,1);
+	font-family:"Helvetica", sans serif;
+	font-weight:bold;
+}
+
+div.button.secondary {
+	background-color: rgb(242,169,1);
+	font-family:"Helvetica", sans serif;
+	font-weight:bold;
+}
+
+div.button.pressed {
+	background-color: #3498db;
+}
+
+div.long {
+padding-top:.25em;
+line-height:120%;
+
+}
+
+div.box1 {
+	padding:10px 5%;
+	}
+div.box2 {
+	border-top:1px solid #333333;
+	border-bottom:1px solid #333333;
+	padding:15px 5% 20px 5%;
+	margin:10px 0;
+	}
+
+
+/* styles for books */
+
+
+div.book {
+	height: 210px;
+	width: 140px;
+	background-color: rgb(177,179,179);
+	display: inline-block;
+	margin: 5px;
+	padding: 0px;
+	position: relative;
+}
+
+img.cover{
+	max-height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: 1px solid black;
+	box-shadow: 5px 5px 2.5px #888888;
+}
+
+div.hidden {
+	display: none;
+}
+
+
+/* styles for popups */
+
+div.popup {
+	height: 0px;
+	width: 0px;
+	position: relative;
+	top: -5px;
+	left: -5px;
+	background-color: rgb(234,236,237);
+	box-shadow: 10px 10px 5px #888888;
+	z-index: -10;
+	border-radius: 10px;
+	-webkit-transition: width 0.5s, height 0.5s;
+	transition: width 0.5s, height 0.5s;
+	margin: 0px;
+	padding: 0px;
+	font-family:"Helvetica", sans serif;
+}
+
+div.popup.visible {
+	height: 300px;
+	width: 450px;
+	border: 1px solid black;
+	z-index: 10;
+	-webkit-transition: width 0.5s, height 0.5s;
+	transition: width 0.5s, height 0.5s;
+}
+
+
+/* hide anything inside a popup until it's time!*/
+
+div.popup * {
+	visibility: hidden;
+	opacity: 0;
+}
+div.popup.visible * {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s 0.5s;
+	transition: opacity 0.2s 0.5s;
+}
+
+/* styles for contents of popups */
+
+div.popup div.popup_cover {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 140px;
+	height: 210px;
+}
+
+div.popup div.popup_buy {
+	position: absolute;
+	left: 10px;
+	top: 235px;
+	width: 140px;
+	height: 35px;
+	background-color: rgb(242,169,1);
+	font-family:"Helvetica", sans serif;
+	font-weight:bold;
+	padding-top:0;
+	border: 1px solid black;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:35px;
+	box-shadow: 5px 5px 2.5px #888888;
+}
+
+
+div.popup_buy:before {
+  content: "buy the book";
+}
+
+div.popup a:link {
+	color: black;	
+}
+
+div.popup a:visited {
+	color: black;	
+}
+
+
+div.popup div.popup_info {
+	position: absolute;
+	left: 170px;
+	top: 10px;
+	width: 272px;
+	height: 288px;
+	overflow-y: scroll;
+}
+
+div.popup div.popup_title {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 1.2em;
+	text-align: left;
+	padding-bottom: 5px;
+}
+
+div.popup div.popup_author {
+	font-weight: bold;
+	font-size: 1.2em;
+	text-align: left;
+	padding-bottom: 3px;
+}
+
+div.popup div.popup_description {
+	text-align: left;
+	padding-right: 8px;
+	font-family:"Georgia", serif;
+}
+
+/* styles for footer */
+
+div.footer{
+	margin-top: 20px;
+	padding: 30px;
+	padding-bottom: 30px;
+	border-top:10px solid #fff;
+	background-color: rgb(57,150,210);
+}
+
+div.footer a:link {
+	text-decoration: none;	
+	color: black;
+	font-weight: bold;
+}
+
+div.footer a.share:visited {
+	text-decoration: none;	
+	color: black;
+	font-weight: bold;
+}
+
+div.footer p {
+	font-family:"Georgia", serif;
+	padding: 10px;
+}
+
+div.share {
+	height: 40px;
+	width: 110px;
+	display: inline-block;
+	border: 2px solid white;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:120%;
+	background-color: rgb(242,169,1);
+	font-family:"Helvetica", sans serif;
+	font-weight:bold;
+	padding: 5px;
+	padding-top:.5em;
+}
