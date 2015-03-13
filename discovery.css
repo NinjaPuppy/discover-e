@@ -269,6 +269,12 @@ div.footer a:link {
 	font-weight: bold;
 }
 
+div.footer a.share:visited {
+	text-decoration: none;	
+	color: black;
+	font-weight: bold;
+}
+
 div.footer p {
 	font-family:"Georgia", serif;
 	padding: 10px;
