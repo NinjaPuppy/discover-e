@@ -253,3 +253,38 @@ div.popup div.popup_description {
 	font-family:"Georgia", serif;
 }
 
+/* styles for footer */
+
+div.footer{
+	margin-top: 20px;
+	padding: 30px;
+	padding-bottom: 100px;
+	border-top:10px solid #fff;
+	background-color: rgb(57,150,210);
+}
+
+div.footer a:link {
+	text-decoration: none;	
+	color: black;
+	font-weight: bold;
+}
+
+div.footer p {
+	font-family:"Georgia", serif;
+	padding: 10px;
+}
+
+div.share {
+	height: 40px;
+	width: 110px;
+	display: inline-block;
+	border: 2px solid white;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgb(242,169,1);
+	font-family:"Helvetica", sans serif;
+	font-weight:bold;
+	padding: 5px;
+}
