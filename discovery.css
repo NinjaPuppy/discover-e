@@ -258,7 +258,7 @@ div.popup div.popup_description {
 div.footer{
 	margin-top: 20px;
 	padding: 30px;
-	padding-bottom: 100px;
+	padding-bottom: 30px;
 	border-top:10px solid #fff;
 	background-color: rgb(57,150,210);
 }
@@ -283,8 +283,10 @@ div.share {
 	border-radius: 10px;
 	text-align: center;
 	vertical-align: middle;
+	line-height:120%;
 	background-color: rgb(242,169,1);
 	font-family:"Helvetica", sans serif;
 	font-weight:bold;
 	padding: 5px;
+	padding-top:.5em;
 }
