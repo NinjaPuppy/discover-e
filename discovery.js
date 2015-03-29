@@ -1,28 +1,41 @@
+var $allIDs = [];
+
 $(document).ready(function() {
 
 	//CLICKING BUTTONS AND HIDING BOOKS
 		
-	//when a button is clicked, mark it pressed or unpressed
+	//when a button is clicked ... 
 	$('div.button').click(function(){
+
+		//mark it pressed or unpressed
 		$(this).toggleClass('pressed');
 	
-	//collect the IDs of all the buttons that are pressed
-	var $allIDs = [];	
-	$('div.pressed').each(function(){
-		$allIDs.push(this.id);
-	});
-	
-	//unhide all the books
-	$('div.book').removeClass('hidden');
+		//empty out the $allIDs array
+		$allIDs.length=0;
 
-	//hide any books with the wrong classes
-	//if a book doesn't have that ID, add the hidden class
-	$.each($allIDs, function(index,value){
-		$('div.book:not(.'+value+')').addClass('hidden');		
-	});
+		//if the button is a secondary button ... 
+		if ($(this).hasClass('secondary')){
+			// unpress all the other secondary buttons
+			$('div.button.secondary').not(this).removeClass('pressed');
+		}
+				
+		//collect the IDs of all the buttons that are pressed
+		console.log($allIDs);	
+		$('div.pressed').each(function(){
+			$allIDs.push(this.id);
+			console.log($allIDs);
+		});
+	
+		//unhide all the books
+		$('div.book').removeClass('hidden');
+
+		//hide any books with the wrong classes
+		//if a book doesn't have that ID, add the hidden class
+		$.each($allIDs, function(index,value){
+			$('div.book:not(.'+value+')').addClass('hidden');		
+		});
 	
 	});
-	
 	
 	//SHOWING DETAIL ON CLICK
 	
@@ -56,5 +69,4 @@ $(document).ready(function() {
 	//	$(this).parent().removeClass('visible');
 	//	});	
 
-	
-});
+	});
