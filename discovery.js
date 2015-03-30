@@ -20,10 +20,9 @@ $(document).ready(function() {
 		}
 				
 		//collect the IDs of all the buttons that are pressed
-		console.log($allIDs);	
 		$('div.pressed').each(function(){
 			$allIDs.push(this.id);
-			console.log($allIDs);
+			//console.log($allIDs);
 		});
 	
 		//unhide all the books
@@ -56,17 +55,6 @@ $(document).ready(function() {
     }
 	});
 	
-	//when mouse leaves book, shrink it again 
-	//I don't think we need this anymore
-	//$('div.book').mouseleave(function(){
-	//	$(".popup", this).removeClass('visible');
-    //});
-	
-	//clicking [x] also closes popup
-	//DOESN'T WORK, though it is identifying the parent div correctly
-	//$('div.close').click(function(){
-	//	$(this).css('border', '1px solid blue');
-	//	$(this).parent().removeClass('visible');
-	//	});	
+
 
 	});
