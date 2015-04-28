@@ -6,9 +6,7 @@ body, p, h1, h2, h3 {
 	}
 
 div.header {
-text-align:center;
-border-bottom:10px solid #fff;
-background-color: rgb(57,150,210);
+background-color: rgb(15,182,148);
 }
 
 div.padding > h3 {
@@ -16,45 +14,58 @@ div.padding > h3 {
 	}
 	
 div.padding-body {
+padding-top:10px;
 margin:30px 5% 0 5%;
 }
 
 
 
 body {
-background-color: rgb(177,179,179);
 }
 
 .logo {
-padding-top: 10px;
-padding-left:10px;
+float:right;
+padding-top: 25px;
+padding-right: 25px;
 margin: 0 0 10px 0;
-width: 10em;
+width: 12.5em;
 }
 
 h1.title {
-margin-top:0;
+padding-top:40px;
+margin-left: 50px;
 line-height:1;
-font-family: "Helvetica", Georgia, sans serif;
-text-align: center; 
+font-family: "Slate Pro", Arial Black, sans serif;
+text-align: left; 
 font-size: 500%;
 color: white;
 }
 
 h2 {
-font-family: "Helvetica", Georgia, sans serif;
-text-align: center; 
+font-family: "Slate Pro", Arial, sans serif;
+text-align: left; 
+padding-bottom: 20px;
+font-weight:normal;
 font-size: 300%;
 color: white;
-margin:25px 0 20px 0;
+margin:25px 0 0 50px;
+}
+
+div.body {
+border-left: 75px solid rgb(84,88,90);
+border-right: 75px solid rgb(84,88,90);
+background-color: white;
+padding-bottom: 30px;
 }
 
 h3 {
-font-family: Georgia, serif;
+font-family: Arial, Georgia, serif;
 font-size:largest;
+font-weight:normal;
 text-indent: 2 em;
 line-height:1em;
 margin:20px 0;
+text-align:center;
 }
 
 div.logo {
@@ -69,46 +80,80 @@ div.button {
 	height: 40px;
 	width: 110px;
 	display: inline-block;
-	border: 2px solid white;
 	margin: 5px;
 	border-radius: 10px;
 	text-align: center;
 	vertical-align: middle;
 	line-height:40px;
-	box-shadow: 10px 10px 5px #888888;
+	border: 2px solid white;
 }
 
 div.button.primary {
-	background-color: rgb(242,169,1);
-	font-family:"Helvetica", sans serif;
+	background-color: rgb(242,169,0);
+	font-family: Arial, sans serif;
 	font-weight:bold;
 }
 
 div.button.secondary {
-	background-color: rgb(242,169,1);
-	font-family:"Helvetica", sans serif;
+	background-color: rgb(242,169,0);
+	font-family: Arial, sans serif;
 	font-weight:bold;
 }
 
 div.button.pressed {
 	background-color: #3498db;
+	border: 2px solid white;
+}
+
+.button:hover {
+	border: 2px solid rgb(84,88,90);
+	cursor: pointer; cursor: hand;
+}
+
+.reset:hover {
+	border: 2px solid rgb(84,88,90);
+	cursor: pointer; cursor: hand;
 }
 
 div.long {
-padding-top:.25em;
-line-height:120%;
+	padding-top:.25em;
+	line-height:110%;
 
 }
 
 div.box1 {
 	padding:10px 5%;
+	text-align:center;
 	}
 div.box2 {
-	border-top:1px solid #333333;
-	border-bottom:1px solid #333333;
-	padding:15px 5% 20px 5%;
+	padding:0 5% 0 5%;
 	margin:10px 0;
+	text-align:center;
 	}
+	
+div.box3 {
+	padding: 0 5% 20px 0;
+	text-align: right;
+	border-bottom:1px solid #333333;
+	font-family: Arial, sans serif;
+	}
+	
+.reset {
+	height: 30px;
+	width: 85px;
+	display: inline-block;
+	margin: 5px;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height:30px;
+	border: 2px solid white;
+	background-color: rgb(137,141,141);
+	font-weight:bold;
+	font-size:small;
+	color:white;
+}
+
 
 
 /* styles for books */
@@ -117,7 +162,6 @@ div.box2 {
 div.book {
 	height: 210px;
 	width: 140px;
-	background-color: rgb(177,179,179);
 	display: inline-block;
 	margin: 5px;
 	padding: 0px;
@@ -155,7 +199,7 @@ div.popup {
 	transition: width 0.5s, height 0.5s;
 	margin: 0px;
 	padding: 0px;
-	font-family:"Helvetica", sans serif;
+	font-family: Arial, sans serif;
 }
 
 div.popup.visible {
@@ -167,6 +211,9 @@ div.popup.visible {
 	transition: width 0.5s, height 0.5s;
 }
 
+.book:hover {
+	cursor: pointer; cursor: hand;
+}
 
 /* hide anything inside a popup until it's time!*/
 
@@ -256,11 +303,9 @@ div.popup div.popup_description {
 /* styles for footer */
 
 div.footer{
-	margin-top: 20px;
 	padding: 30px;
 	padding-bottom: 30px;
-	border-top:10px solid #fff;
-	background-color: rgb(57,150,210);
+	background-color: rgb(15,182,148);
 }
 
 div.footer a:link {
@@ -276,7 +321,7 @@ div.footer a.share:visited {
 }
 
 div.footer p {
-	font-family:"Georgia", serif;
+	font-family: Arial, serif;
 	padding: 10px;
 }
 
@@ -284,15 +329,20 @@ div.share {
 	height: 40px;
 	width: 110px;
 	display: inline-block;
-	border: 2px solid white;
 	margin: 5px;
 	border-radius: 10px;
 	text-align: center;
 	vertical-align: middle;
 	line-height:120%;
-	background-color: rgb(242,169,1);
+	background-color: rgb(242,169,0);
 	font-family:"Helvetica", sans serif;
 	font-weight:bold;
 	padding: 5px;
 	padding-top:.5em;
+	border: 2px solid rgb(15,182,148);
+}
+
+div.share:hover {
+	border: 2px solid rgb(84,88,90);
+	cursor: pointer; cursor: hand;
 }
