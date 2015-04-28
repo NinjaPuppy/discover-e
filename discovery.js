@@ -36,6 +36,20 @@ $(document).ready(function() {
 	
 	});
 	
+	//when reset button is clicked ... 
+	$('div.reset').click(function(){
+	
+	
+			// unpress all buttons
+			$('div.button.primary').removeClass('pressed');
+			$('div.button.secondary').removeClass('pressed');
+		
+		
+		//unhide all the books
+		$('div.book').removeClass('hidden');
+		
+	});
+	
 	//SHOWING DETAIL ON CLICK
 	
 	//when book is clicked, expand it
