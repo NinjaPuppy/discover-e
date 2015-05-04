@@ -6,50 +6,53 @@ body, p, h1, h2, h3 {
 	}
 
 div.header {
-background-color: rgb(15,182,148);
+	background-color: rgb(15,182,148);
 }
 
 div.padding > h3 {
 	margin-left:.5em;
 	}
-	
+
 div.padding-body {
-padding-top:10px;
-margin:30px 5% 0 5%;
+margin:0 5%;
 }
 
 
-
-body {
-}
-
-.logo {
-float:right;
+img.logo {
 padding-top: 25px;
-padding-right: 25px;
+padding-left: 75px;
 margin: 0 0 10px 0;
-width: 12.5em;
+width: 8em;
 }
 
 h1.title {
-padding-top:40px;
-margin-left: 50px;
+margin-left: 75px;
 line-height:1;
 font-family: "Slate Pro", Arial Black, sans serif;
 text-align: left; 
-font-size: 500%;
-color: white;
-}
-
-h2 {
-font-family: "Slate Pro", Arial, sans serif;
-text-align: left; 
-padding-bottom: 20px;
-font-weight:normal;
 font-size: 300%;
 color: white;
-margin:25px 0 0 50px;
+padding-bottom: 10px;
 }
+
+/* media query to arrange head in two columns at larger screen widths */
+
+@media only screen and (min-width: 650px) {
+
+h1.title {
+	float: left;
+	width: 44%;
+	padding-top:55px;
+}
+
+div.logo {
+	float: right;
+	padding-left: 0px;
+	margin-right: 75px;
+}
+
+}
+
 
 div.body {
 border-left: 75px solid rgb(84,88,90);
@@ -68,10 +71,6 @@ margin:20px 0;
 text-align:center;
 }
 
-div.logo {
- width:15%;
-
- }
 
 
 /* styles for buttons */
@@ -101,7 +100,7 @@ div.button.secondary {
 }
 
 div.button.pressed {
-	background-color: #3498db;
+	background-color: rgb(15,182,148);
 	border: 2px solid white;
 }
 
@@ -110,8 +109,9 @@ div.button.pressed {
 	cursor: pointer; cursor: hand;
 }
 
-.reset:hover {
-	border: 2px solid rgb(84,88,90);
+.roundbutton:hover {
+	border: 2px solid white;
+	color: white;
 	cursor: pointer; cursor: hand;
 }
 
@@ -122,36 +122,79 @@ div.long {
 }
 
 div.box1 {
-	padding:10px 5%;
+	padding:10px;
 	text-align:center;
 	}
+
 div.box2 {
-	padding:0 5% 0 5%;
-	margin:10px 0;
+	padding:10px;
 	text-align:center;
 	}
 	
 div.box3 {
-	padding: 0 5% 20px 0;
 	text-align: right;
-	border-bottom:1px solid #333333;
 	font-family: Arial, sans serif;
+	position: fixed;
+	top: 190px;
+	left: 10px;
 	}
+
+div.box4 {
+	text-align: right;
+	font-family: Arial, sans serif;
+	position: fixed;
+	top: 250px;
+	left: 10px;
+	}
+
+div.box5 {
+	text-align: right;
+	font-family: Arial, sans serif;
+	position: fixed;
+	top: 310px;
+	left: 10px;
+	}
+
+
+div.clearfloat {
+	clear: both;
+}
 	
-.reset {
-	height: 30px;
-	width: 85px;
+div.buttonbox {
+	border-bottom: 1px solid #333333;
+	margin-bottom: 10px;
+}	
+
+/* media query to arrange buttons in two columns at larger screen widths */
+
+@media only screen and (min-width: 800px) {
+
+div.box1 {
+	float: left;
+	width: 75%;
+}
+
+div.box2 {
+	float: right;
+	width: 18%;
+}
+
+}
+
+	
+.roundbutton {
+	height: 40px;
+	width: 40px;
 	display: inline-block;
-	margin: 5px;
-	border-radius: 10px;
+	border-radius: 40px;
 	text-align: center;
 	vertical-align: middle;
-	line-height:30px;
-	border: 2px solid white;
+	line-height:38px;
 	background-color: rgb(137,141,141);
 	font-weight:bold;
-	font-size:small;
-	color:white;
+	font-size:35px;
+	color:black;
+	border: 2px solid black;
 }
 
 
@@ -308,38 +351,17 @@ div.footer{
 	background-color: rgb(15,182,148);
 }
 
-div.footer a:link {
+a:link {
 	text-decoration: none;	
-	color: black;
-	font-weight: bold;
 }
 
-div.footer a.share:visited {
+a.share:visited {
 	text-decoration: none;	
-	color: black;
-	font-weight: bold;
 }
 
 div.footer p {
 	font-family: Arial, serif;
 	padding: 10px;
-}
-
-div.share {
-	height: 40px;
-	width: 110px;
-	display: inline-block;
-	margin: 5px;
-	border-radius: 10px;
-	text-align: center;
-	vertical-align: middle;
-	line-height:120%;
-	background-color: rgb(242,169,0);
-	font-family:"Helvetica", sans serif;
-	font-weight:bold;
-	padding: 5px;
-	padding-top:.5em;
-	border: 2px solid rgb(15,182,148);
 }
 
 div.share:hover {
