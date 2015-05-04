@@ -156,6 +156,14 @@ div.box5 {
 	}
 
 
+div.box6 {
+	text-align: right;
+	font-family: Arial, sans serif;
+	position: fixed;
+	top: 370px;
+	left: 10px;
+	}
+
 div.clearfloat {
 	clear: both;
 }
