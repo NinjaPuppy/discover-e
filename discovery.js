@@ -1,28 +1,54 @@
+var $allIDs = [];
+
 $(document).ready(function() {
 
 	//CLICKING BUTTONS AND HIDING BOOKS
 		
-	//when a button is clicked, mark it pressed or unpressed
+	//when a button is clicked ... 
 	$('div.button').click(function(){
+
+		//mark it pressed or unpressed
 		$(this).toggleClass('pressed');
 	
-	//collect the IDs of all the buttons that are pressed
-	var $allIDs = [];	
-	$('div.pressed').each(function(){
-		$allIDs.push(this.id);
-	});
-	
-	//unhide all the books
-	$('div.book').removeClass('hidden');
+		//empty out the $allIDs array
+		$allIDs.length=0;
 
-	//hide any books with the wrong classes
-	//if a book doesn't have that ID, add the hidden class
-	$.each($allIDs, function(index,value){
-		$('div.book:not(.'+value+')').addClass('hidden');		
-	});
+		//if the button is a secondary button ... 
+		if ($(this).hasClass('secondary')){
+			// unpress all the other secondary buttons
+			$('div.button.secondary').not(this).removeClass('pressed');
+		}
+				
+		//collect the IDs of all the buttons that are pressed
+		$('div.pressed').each(function(){
+			$allIDs.push(this.id);
+			//console.log($allIDs);
+		});
+	
+		//unhide all the books
+		$('div.book').removeClass('hidden');
+
+		//hide any books with the wrong classes
+		//if a book doesn't have that ID, add the hidden class
+		$.each($allIDs, function(index,value){
+			$('div.book:not(.'+value+')').addClass('hidden');		
+		});
 	
 	});
 	
+	//when reset button is clicked ... 
+	$('div.reset').click(function(){
+	
+	
+			// unpress all buttons
+			$('div.button.primary').removeClass('pressed');
+			$('div.button.secondary').removeClass('pressed');
+		
+		
+		//unhide all the books
+		$('div.book').removeClass('hidden');
+		
+	});
 	
 	//SHOWING DETAIL ON CLICK
 	
@@ -43,18 +69,6 @@ $(document).ready(function() {
     }
 	});
 	
-	//when mouse leaves book, shrink it again 
-	//I don't think we need this anymore
-	//$('div.book').mouseleave(function(){
-	//	$(".popup", this).removeClass('visible');
-    //});
-	
-	//clicking [x] also closes popup
-	//DOESN'T WORK, though it is identifying the parent div correctly
-	//$('div.close').click(function(){
-	//	$(this).css('border', '1px solid blue');
-	//	$(this).parent().removeClass('visible');
-	//	});	
 
-	
-});
+
+	});
