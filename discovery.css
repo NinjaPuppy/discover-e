@@ -203,6 +203,7 @@ div.box2 {
 	font-size:35px;
 	color:black;
 	border: 2px solid black;
+	z-index: 100;
 }
 
 
