@@ -267,6 +267,11 @@ div.popup.visible {
 	cursor: pointer; cursor: hand;
 }
 
+div.popup.visible:hover {
+	cursor: default;
+}
+
+
 /* hide anything inside a popup until it's time!*/
 
 div.popup * {
