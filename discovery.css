@@ -203,6 +203,7 @@ div.box2 {
 	font-size:35px;
 	color:black;
 	border: 2px solid black;
+	z-index: 100;
 }
 
 
@@ -265,6 +266,11 @@ div.popup.visible {
 .book:hover {
 	cursor: pointer; cursor: hand;
 }
+
+div.popup.visible:hover {
+	cursor: default;
+}
+
 
 /* hide anything inside a popup until it's time!*/
 
